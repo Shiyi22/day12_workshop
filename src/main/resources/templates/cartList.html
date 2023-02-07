@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart List</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Index</th>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>First</th>
+            <th>Last</th>
+            <th>Even</th>
+        </tr>
+        <tr data-th-each="item, status :${cartItems}">
+            <td data-th-text="${status.index + 1}"></td>
+            <td data-th-text="${item.itemName}"></td>
+            <td data-th-text="${item.quantity}"></td>
+            <td data-th-text="${status.first}"></td>
+            <td data-th-text="${status.last}"></td>
+            <td data-th-text="${status.even}"></td>
+        </tr>
+    </table>
+</body>
+</html>
