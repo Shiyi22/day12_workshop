@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 12 Workshop</title>
+</head>
+<body>
+    <!-- <h1>Your list of <span data-th-text="${numbers}"></span> random numbers</h1> -->
+
+    <table>
+        <!-- Loop the list of numbers -->
+        <tr data-th-each="i : ${numbers}">
+            <td>
+                <span data-th-text="${i}"></span>
+                <img th:src="@{${'/images/' + i + '.jpg'}}" width="150px" height="150px" />
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
